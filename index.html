@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<script>
+	class Maths{
+		x;
+		y;
+		constructor(x, y){
+			this.x = x;
+			this.y = y;
+		}
+		sum(){
+			return this.x + this.y;
+		}
+		difference(){
+			return this.x - this.y;
+		}
+		multiplication(){
+			return this.x * this.y;
+		}
+		division(){
+			return this.x / this.y;
+		}
+
+	}
+	var array = [new Maths(+prompt("Введите x для 1-ого объекта"), +prompt("Введите y для 1-ого объекта")), new Maths(+prompt("Введите x для 2-ого объекта"), +prompt("Введите y для 2-ого объекта")), new Maths(+prompt("Введите x для 3-ого объекта"), +prompt("Введите y для 3-ого объекта"))];
+	for (item of array){
+		document.writeln((array.indexOf(item) + 1) + " объект<br>");
+		document.writeln("Сложение: " + item.sum() + "<br>");
+		document.writeln("Разность: " + item.difference() + "<br>");
+		document.writeln("Произведение: " + item.multiplication() + "<br>");
+		document.writeln("Частное: " + item.division() + "<br> <br>");
+	}
+	</script>
+</body>
+</html>
